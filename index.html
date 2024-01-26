@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checking Voter Eligiblity</title>
+    <style>
+        h1{
+            text-align: center;
+            color: white;
+            background-color: darkslateblue;
+            padding: 25px;
+        }
+        .age{
+            width: 40%;
+            padding: 20px;
+            margin: auto;
+            border-radius: 8px;
+            border: 2px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>To Determine Your Voter Eligiblity.</h1>
+    <div class="age">
+        <label>Enter Your Age Here : </label><br><br>
+        <input id="age"><br><br><br>
+        <button onclick="verify()">Click Me:</button>
+    </div>
+</body>
+</html>
+<script>
+    function verify(){
+        var no;
+        no = Number(document.getElementById("age").value);
+        if(no<18){
+            alert("You are not eligible for Vote");
+        }
+        else{
+            alert("Yay!! You are Eligible for Vote");
+        }
+    }
+</script>
